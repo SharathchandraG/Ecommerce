@@ -1,0 +1,11 @@
+<h2>Shopping Cart</h2>
+<div *ngIf="cartItems.length > 0">
+  <div *ngFor="let item of cartItems">
+    <div>
+      {{ products[item.productId]?.name }} - Quantity: {{ item.quantity }} - Total: ${{ getTotalCost(item) }}
+    </div>
+  </div>
+</div>
+<div *ngIf="cartItems.length === 0">
+  <p>Your cart is empty.</p>
+</div>
